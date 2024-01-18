@@ -52,6 +52,7 @@ export const auth = {
         sub: newUser._id,
         firstName: newUser.firstName,
         lastName: newUser.lastName,
+        role: newUser.role
       })
 
       res
@@ -102,6 +103,7 @@ export const auth = {
         sub: user._id,
         firstName: user.firstName,
         lastName: user.lastName,
+        role: user.role
       })
 
       res.status(200).json({ token })

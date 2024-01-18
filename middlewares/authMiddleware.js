@@ -43,3 +43,15 @@ export const authMiddleware = async (req, res, next) => {
     return
   }
 }
+
+
+
+export const adminAdminMiddleware = (req, res,next) => {
+
+
+  if(req.user.role !== "admin"){
+    res.status(401).json({ message: 'only admins are authorized' })
+    return
+  }
+  next()
+}
